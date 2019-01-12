@@ -2,7 +2,6 @@ var socket = io();
 
 socket.on('connect', function() {
   console.log("Connected to server");
-
 });
 
 socket.on('disconnect', function() {
@@ -13,3 +12,7 @@ socket.on('disconnect', function() {
 socket.on('newMessage', function(message) {
   console.log('Got a message', message);
 });
+
+socket.on('newUser', function(message) {
+  console.log(message.text);
+})
