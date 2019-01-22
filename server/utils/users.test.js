@@ -48,12 +48,12 @@ describe('Users', () => {
 
   it('should find user', () => {
     var user = users.getUser('2');
-    expect(user).toEqual('Jen');
+    expect(user.name).toEqual('Jen');
   });
 
   it('should not find user', () => {
     var user = users.getUser('4');
-    expect(user).toBe('Name not found');
+    expect(user).toBe(undefined);
   });
 
 
